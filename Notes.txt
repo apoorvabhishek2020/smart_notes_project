@@ -1,0 +1,12 @@
+Django Shell
+python manage.py shell
+from notes.models import Notes 
+mynote = Notes.objects.get(pk='1')
+mynote.title
+mynote.text
+Notes.objects.all() --> queryset
+new_note = Notes.objects.create(title="A second note", text = "This is sec")
+Notes.objects.filter(title__startswith="My")
+Notes.objects.filter(text__icontains="Django")
+Notes.objects.exclude(text__icontains="Django")
+Notes.objects.filter(text__icontains='Django').exclude(title__icontains='Django')
