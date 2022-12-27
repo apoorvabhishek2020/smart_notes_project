@@ -1,0 +1,8 @@
+version: '3'
+services:
+  sm:
+    image: sm:1.0
+    ports:
+    - 7000:8000
+    environment:
+      - DJANGO_SETTINGS_MODULE=smartnotes.settings.dev
